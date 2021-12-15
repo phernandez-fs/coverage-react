@@ -6,7 +6,9 @@
 .pnp.js
 
 # testing
-/coverage
+/coverage/lcov-report
+/coverage/clover.xml
+
 
 # production
 /build
