@@ -1,6 +1,11 @@
 name: codacy-coverage-reporter
 
-on: ["push"]
+# Only trigger, when the build workflow succeeded
+on:
+  workflow_run:
+    workflows: ["Codacy Analysis CLI"]
+    types:
+      - completed
 
 jobs:
   codacy-coverage-reporter:
