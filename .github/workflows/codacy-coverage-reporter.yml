@@ -3,6 +3,18 @@ name: codacy-coverage-reporter
 on: ["push"]
 
 jobs:
+  
+  codacy-analysis-cli:
+    name: Codacy Analysis CLI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
+  
+  
   codacy-coverage-reporter:
     runs-on: ubuntu-latest
     name: codacy-coverage-reporter
@@ -15,3 +27,4 @@ jobs:
           # or
           # api-token: ${{ secrets.CODACY_API_TOKEN }}
           coverage-reports: coverage/lcov.info
+    
