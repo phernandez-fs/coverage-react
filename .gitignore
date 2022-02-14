@@ -8,6 +8,7 @@
 # testing
 /coverage/lcov-report
 /coverage/clover.xml
+/coverage
 
 
 # production
